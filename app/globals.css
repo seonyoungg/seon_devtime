@@ -1,8 +1,8 @@
 @import "tailwindcss";
 :root {
   --color-dev-primary: #4c79ff;
-  --color-dev-primary200: #4c79ff1a;
-  --color-dev-primary300: #4c79ff4d;
+  --color-dev-primary200: #4c79ff4d;
+  --color-dev-primary300: #4c79ff1a;
   --color-dev-primarylight: #78b0ff;
   --color-dev-primarylight200: #78b0ff1a;
   --color-dev-primarylight300: #78b0ff4d;
