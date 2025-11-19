@@ -34,7 +34,7 @@ export default function Button({
       )} disabled={disabled} {...restProps}>
 
       {/* 텍스트 */}
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 font-semibold">{children}</span>
 
       {/* hover 오버레이 */}
       {
