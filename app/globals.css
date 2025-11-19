@@ -25,7 +25,8 @@
   --color-dev-gray200: #e5e7eb;
   --color-dev-gray300: #ccd0d6;
   --color-dev-gray400: #969da8;
-  --color-dev-gray500: #717887 --color-dev-gray600: #4b5563;
+  --color-dev-gray500: #717887; 
+  --color-dev-gray600: #4b5563;
   --color-dev-gray700: #394252;
   --color-dev-gray800: #1f2937;
   --color-dev-disabled: #969da8;
