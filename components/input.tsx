@@ -16,7 +16,9 @@ export default function InputItem(){
 
   return (
     <div className="group flex items-center gap-2  py-4 px-6 rounded-md bg-(--color-dev-gray100)">
+      <label htmlFor="textInput" className="sr-only">텍스트 입력창</label>
       <input 
+        name="textInput"
         type="text" 
         placeholder="Placeholder" 
         className={clsx(
