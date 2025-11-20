@@ -1,5 +1,6 @@
 @import "tailwindcss";
-:root {
+
+@theme {
   --color-dev-primary: #4c79ff;
   --color-dev-primary200: #4c79ff4d;
   --color-dev-primary300: #4c79ff1a;
@@ -25,7 +26,7 @@
   --color-dev-gray200: #e5e7eb;
   --color-dev-gray300: #ccd0d6;
   --color-dev-gray400: #969da8;
-  --color-dev-gray500: #717887; 
+  --color-dev-gray500: #717887;
   --color-dev-gray600: #4b5563;
   --color-dev-gray700: #394252;
   --color-dev-gray800: #1f2937;
