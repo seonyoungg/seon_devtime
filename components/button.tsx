@@ -8,17 +8,17 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ variant = 'default', disabled = false, children, ...restProps }: ButtonProps) {
   // 기본 스타일
-  const baseStyles = 'relative px-4 py-3 rounded-sm min-w-20 overflow-hidden focus:outline-(--color-dev-fuchsia)';
+  const baseStyles = 'relative px-4 py-3 rounded-sm min-w-20 overflow-hidden focus:outline-dev-fuchsia';
 
   // 타입별 배경색
   const typeStyles = {
-    default: 'bg-(--color-dev-primary) text-white cursor-pointer',
-    light: 'bg-dev-primary200 text-(--color-dev-primary) cursor-pointer',
-    secondaryLight: 'bg-dev-primary300 text-(--color-dev-primary) cursor-pointer',
+    default: 'bg-dev-primary text-white cursor-pointer',
+    light: 'bg-dev-primary200 text-dev-primary cursor-pointer',
+    secondaryLight: 'bg-dev-primary300 text-dev-primary cursor-pointer',
   };
 
   // 상태별 제어(disabled)
-  const statusStyles = disabled ? 'cursor-not-allowed text-(--color-dev-gray300) bg-(--color-dev-gray400)' : '';
+  const statusStyles = disabled ? 'cursor-not-allowed text-dev-gray300 bg-dev-gray400' : '';
 
   return (
     <button className={clsx(baseStyles, !disabled && typeStyles[variant], statusStyles)} disabled={disabled} {...restProps}>
