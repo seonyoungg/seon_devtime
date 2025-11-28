@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ToastContainer } from 'react-toastify';
+import DevHeader from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='font-sans'>
+        <DevHeader />
         {children}
         <ToastContainer position='top-center' autoClose={2000} hideProgressBar closeOnClick pauseOnHover draggable />
       </body>
