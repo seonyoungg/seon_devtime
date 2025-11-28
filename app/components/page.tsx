@@ -40,7 +40,9 @@ export default function ComponentsAll() {
       <section className='space-y-4 my-8'>
         <h2>랭킹 아이템 컴포넌트</h2>
         <div className='flex flex-col gap-4'>
-          <RankingItem />
+          <RankingItem rank={1} />
+          <RankingItem rank={8} />
+          <RankingItem rank={1000} />
         </div>
       </section>
     </div>
