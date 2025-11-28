@@ -4,7 +4,8 @@
   --font-sans: "Pretendard Variable", sans-serif;
 
   /* 브레이크포인트 */
-  --breakpoint-xs: 26.875rem;
+  --breakpoint-xs: 31.25rem;
+  --breakpoint-2xs: 25rem;
 
   /* 색상 */
   --color-dev-primary: #4c79ff;
