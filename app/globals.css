@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Pretendard Variable", sans-serif;
+
+  /* 브레이크포인트 */
+  --breakpoint-xs: 26.875rem;
+
+  /* 색상 */
   --color-dev-primary: #4c79ff;
   --color-dev-primary200: #4c79ff4d;
   --color-dev-primary300: #4c79ff1a;
