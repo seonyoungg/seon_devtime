@@ -14,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='ko-KR'>
       <body className='font-sans'>
-        <DevHeader />
-        {children}
+        <div className='w-full mx-auto font-sans max-w-7xl'>
+          <DevHeader />
+          <main className='px-2 pt-40'>{children}</main>
+        </div>
         <ToastContainer position='top-center' autoClose={2000} hideProgressBar closeOnClick pauseOnHover draggable />
       </body>
     </html>
