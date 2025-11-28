@@ -8,7 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ variant = 'default', disabled = false, children, ...restProps }: ButtonProps) {
   // 기본 스타일
-  const baseStyles = 'relative px-4 py-3 rounded-sm min-w-20 overflow-hidden focus:outline-dev-fuchsia';
+  const baseStyles = 'relative px-2 text-sm xs:text-[16px] xs:px-4 py-1.5 xs:py-3 rounded-sm min-w-16 xs:min-w-20 overflow-hidden focus:outline-dev-fuchsia';
 
   // 타입별 배경색
   const typeStyles = {
@@ -26,7 +26,7 @@ export default function Button({ variant = 'default', disabled = false, children
       <span className='relative z-10 font-semibold'>{children}</span>
 
       {/* hover 오버레이 */}
-      {!disabled && <span className='absolute inset-0 bg-black opacity-0 hover:opacity-10 transition-opacity duration-300'></span>}
+      {!disabled && <span className='absolute inset-0 transition-opacity duration-300 bg-black opacity-0 hover:opacity-10'></span>}
     </button>
   );
 }
