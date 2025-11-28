@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className='font-sans'>
         <div className='w-full mx-auto font-sans max-w-7xl'>
           <DevHeader />
-          <main className='px-2 pt-40'>{children}</main>
+          <main className='px-2'>{children}</main>
         </div>
         <ToastContainer position='top-center' autoClose={2000} hideProgressBar closeOnClick pauseOnHover draggable />
       </body>

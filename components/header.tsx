@@ -11,7 +11,7 @@ export default function DevHeader() {
   const navLinks = [
     { href: '/dashboard', label: '대시보드' },
     { href: '/rank', label: '랭킹' },
-    { href: '/components', label: '컴포넌트' },
+    // { href: '/components', label: '컴포넌트' },
   ];
 
   const authLinks = [
