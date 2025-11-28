@@ -3,12 +3,13 @@ import Button from '@/components/button';
 import ImgUploader from '@/components/imgUploader';
 import InputItem from '@/components/input';
 import RankingItem from '@/components/rankingItem';
+import TimerItem from '@/components/timerItem';
+import TimerBox from '@/components/timerBox';
 
 export default function ComponentsAll() {
   return (
     <div className='px-4 pt-24'>
       <h1>컴포넌트 확인용 페이지</h1>
-
       <section className='my-8 space-y-4'>
         <h2>버튼 컴포넌트</h2>
         <div className='flex flex-wrap items-center gap-4'>
@@ -43,6 +44,18 @@ export default function ComponentsAll() {
           <RankingItem rank={1} />
           <RankingItem rank={8} />
           <RankingItem rank={1000} />
+        </div>
+      </section>
+      <section className='my-8 space-y-4'>
+        <h2>타이머 아이템 컴포넌트(개별)</h2>
+        <div className='flex gap-4'>
+          <TimerItem label='HOURS' />
+        </div>
+      </section>
+      <section className='my-8 space-y-4'>
+        <h2>타이머 아이템 컴포넌트</h2>
+        <div className='flex gap-4'>
+          <TimerBox />
         </div>
       </section>
     </div>
