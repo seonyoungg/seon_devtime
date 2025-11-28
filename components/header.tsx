@@ -1,7 +1,23 @@
+'use client';
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function DevHeader() {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: '/dashboard', label: '대시보드' },
+    { href: '/rank', label: '랭킹' },
+    { href: '/components', label: '컴포넌트' },
+  ];
+
+  const authLinks = [
+    { href: '/login', label: '로그인' },
+    { href: '/join', label: '회원가입' },
+  ];
+
   return (
     <header className='fixed top-0 left-0 w-full px-6 py-4 bg-white border-b border-dev-gray200 z-10000'>
       <div className='flex items-center gap-12'>
@@ -11,34 +27,23 @@ export default function DevHeader() {
 
         <nav className='flex items-center justify-between flex-1'>
           <ul className='flex items-center gap-9'>
-            <li>
-              <Link href='/dashboard' className='font-semibold text-dev-secondary hover:underline underline-offset-4'>
-                대시보드
-              </Link>
-            </li>
-            <li>
-              <Link href='/rank' className='font-semibold text-dev-secondary hover:underline underline-offset-4'>
-                랭킹
-              </Link>
-            </li>
-            <li>
-              <Link href='/components' className='font-semibold text-dev-secondary hover:underline underline-offset-4'>
-                컴포넌트
-              </Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className={clsx('font-semibold hover:underline underline-offset-4 text-dev-secondary', pathname === link.href ? 'underline' : '')}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <ul className='flex items-center gap-8'>
-            <li>
-              <Link href='/login' className='font-semibold text-dev-secondary hover:underline underline-offset-4'>
-                로그인
-              </Link>
-            </li>
-            <li>
-              <Link href='/join' className='font-semibold text-dev-secondary hover:underline underline-offset-4'>
-                회원가입
-              </Link>
-            </li>
+            {authLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className={clsx('font-semibold hover:underline underline-offset-4 text-dev-secondary', pathname === link.href ? 'underline' : 'text-dev-secondary')}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
