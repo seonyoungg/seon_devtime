@@ -2,6 +2,7 @@
 
 import clsx from 'clsx';
 import { ImagePlus, X } from 'lucide-react';
+import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -49,7 +50,7 @@ export default function ImgUploader() {
 
       <div className={clsx('relative w-30 h-30 rounded-md bg-white border', imgSrc !== '' ? 'border-dev-gray300' : 'border-dev-primary border-dashed')}>
         {/* 업로드 박스  */}
-        {imgSrc ? <img src={imgSrc} alt='업로드된 이미지' className='w-full h-full object-cover rounded-md' /> : <ImagePlus size={32} onClick={() => inputRef.current?.click()} className='absolute left-1/2 top-1/2 -translate-1/2 text-dev-primary) cursor-pointer' />}
+        {imgSrc ? <Image src={imgSrc} fill alt='업로드된 이미지' className='w-full h-full object-cover rounded-md' /> : <ImagePlus size={32} onClick={() => inputRef.current?.click()} className='absolute left-1/2 top-1/2 -translate-1/2 text-dev-primary) cursor-pointer' />}
 
         {/* 삭제버튼 */}
         {imgSrc && (
